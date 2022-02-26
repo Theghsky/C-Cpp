@@ -1,0 +1,3 @@
+﻿  test.c
+E:\自学C\2.21\2.21\test.c(103,16): warning C4047: “<=”:“int”与“int *”的间接级别不同
+  2.21.vcxproj -> E:\自学C\2.21\Debug\2.21.exe

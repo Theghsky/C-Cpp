@@ -1,0 +1,6 @@
+﻿  test.c
+E:\自学C\2.7\2.7\test.c(174,13): warning C4476: "fscanf": 格式说明符中的类型字段字符“.”未知
+E:\自学C\2.7\2.7\test.c(174,13): warning C4477: “fscanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 2 拥有了类型“float *”
+E:\自学C\2.7\2.7\test.c(174,47): warning C4474: fscanf: 格式字符串中传递的参数太多
+E:\自学C\2.7\2.7\test.c(174,47): message : 占位符和其参数预计 2 可变参数，但提供的却是 3 参数
+  2.7.vcxproj -> E:\自学C\2.7\Debug\2.7.exe

@@ -1,0 +1,5 @@
+﻿  List.c
+  test.c
+  正在生成代码...
+E:\自学C\带头双向循环链表\带头双向循环链表\List.c(9): warning C4716: “BuyListNode”: 必须返回一个值
+  带头双向循环链表.vcxproj -> E:\自学C\带头双向循环链表\Debug\带头双向循环链表.exe

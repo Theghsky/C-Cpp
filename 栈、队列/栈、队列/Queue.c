@@ -46,7 +46,7 @@ void QueuePush(Queue* pq, QDataType x)
 	}
 }
 
-// 队头出
+// 队头出(头删)
 void QueuePop(Queue* pq)
 {
 	assert(pq);

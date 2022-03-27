@@ -53,8 +53,8 @@ void TestQueue()
 
 int main()
 {
-	//TestStack();
-	TestQueue();
+	TestStack();
+	//TestQueue();
 
 	return 0;
 }

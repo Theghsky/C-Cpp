@@ -24,7 +24,7 @@ typedef struct Queue
 void QueueInit(Queue* pq);
 //队销毁
 void QueueDestory(Queue* pq);
-//队尾出
+//队尾入
 void QueuePush(Queue* pq, QDataType x);
 //队头出
 void QueuePop(Queue* pq);

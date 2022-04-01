@@ -64,7 +64,43 @@ void HeapSort(int* a, int n)
 	}
 }
 
+void SelectSort(int* a, int n)
+{
+	int begin = 0, end = n - 1;
+	while (begin < end)
+	{
+		int mini = begin, maxi = begin;
+		for (int i = begin; i <= end; ++i)
+		{
+			if (a[i] < a[mini])
+			{
+				mini = i;
+			}
+			if (a[i] > a[maxi])
+			{
+				maxi = i;
+			}
+		}
+		Swap(&a[begin], &a[mini]);
+		//如果begin跟maxi重叠，需要修正一下maxi的位置
+		if (begin == maxi)
+		{
+			maxi = mini;
+		}
+		Swap(&a[maxi], &a[end]);
+		++begin;
+		--end;
+	}
+}
+
 void TestHeapSort()
+{
+	int a[] = { 3, 5, 2, 7, 8, 6, 1, 9, 4, 0 };
+	HeapSort(a, sizeof(a) / sizeof(int));
+	Print(a, sizeof(a) / sizeof(int));
+}
+
+void TestSelectSort()
 {
 	int a[] = { 3, 5, 2, 7, 8, 6, 1, 9, 4, 0 };
 	HeapSort(a, sizeof(a) / sizeof(int));
@@ -75,7 +111,7 @@ void TestHeapSort()
 void TestOP()
 {
 	srand(time(0));
-	const int N = 1000000;
+	const int N = 100000;
 	int* a3 = (int*)malloc(sizeof(int) * N);
 	int* a4 = (int*)malloc(sizeof(int) * N);
 
@@ -87,7 +123,7 @@ void TestOP()
 	}
 
 	int begin3 = clock();
-	//SelectSort(a3, N);
+	SelectSort(a3, N);
 	int end3 = clock();
 
 	int begin4 = clock();
@@ -105,6 +141,8 @@ void TestOP()
 int main()
 {
 	//TestHeapSort();
+	TestSelectSort();
 	TestOP();
+
 	return 0;
 }

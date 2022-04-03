@@ -24,7 +24,7 @@ void Swap(int* p1, int* p2)
 // 最好情况:O(N)
 void BubbleSort(int* a, int n)
 {
-	for (int j = 0; j < 0; ++j)
+	for (int j = 0; j < n; ++j)
 	{
 		int exchange = 0;
 		for (int i = 1; i < n - j; ++i)

@@ -20,8 +20,8 @@ void Swap(int* p1, int* p2)
 	*p2 = tmp;
 }
 
-// Ê±¼ä¸´ÔÓ¶È£ºO£¨N*N£©
-// ×îºÃÇé¿ö:O(N)
+// æ—¶é—´å¤æ‚åº¦ï¼šOï¼ˆN*Nï¼‰
+// æœ€å¥½æƒ…å†µ:O(N)
 void BubbleSort(int* a, int n)
 {
 	for (int j = 0; j < n; ++j)
@@ -50,7 +50,7 @@ void TestBubbleSort()
 	Print(a, sizeof(a) / sizeof(int));
 }
 
-//ÍÚ¿Ó·¨
+//æŒ–å‘æ³•
 void QuickSort(int* a, int left, int right)
 {
 	if (left >= right)
@@ -61,16 +61,16 @@ void QuickSort(int* a, int left, int right)
 	int key = a[begin];
 	while (begin < end)
 	{
-		//ÓÒ±ßÕÒĞ¡£¬·Åµ½×ó±ß
+		//å³è¾¹æ‰¾å°ï¼Œæ”¾åˆ°å·¦è¾¹
 		while (begin < end && a[end] >= key)
 			--end;
-		//Ğ¡µÄ·Åµ½×ó±ßµÄ¿ÓÀï£¬×Ô¼ºĞÎ³ÉĞÂµÄ¿ÓÎ»
+		//å°çš„æ”¾åˆ°å·¦è¾¹çš„å‘é‡Œï¼Œè‡ªå·±å½¢æˆæ–°çš„å‘ä½
 		a[pivot] = a[end];
 		pivot = end;
-		//×ó±ßÕÒ´ó
+		//å·¦è¾¹æ‰¾å¤§
 		while (begin < end && a[begin] <= key)
 			++begin;
-		//´óµÄ·Åµ½×ó±ßµÄ¿ÓÀï£¬×Ô¼ºĞÎ³ÉĞÂµÄ¿ÓÎ»
+		//å¤§çš„æ”¾åˆ°å·¦è¾¹çš„å‘é‡Œï¼Œè‡ªå·±å½¢æˆæ–°çš„å‘ä½
 		a[pivot] = a[begin];
 		pivot = begin;
 	}
@@ -89,7 +89,7 @@ void TestQuickSort()
 	Print(a, sizeof(a) / sizeof(int));
 }
 
-// ²âÊÔÅÅĞòµÄĞÔÄÜ¶Ô±È
+// æµ‹è¯•æ’åºçš„æ€§èƒ½å¯¹æ¯”
 void TestOP()
 {
 	srand(time(0));
